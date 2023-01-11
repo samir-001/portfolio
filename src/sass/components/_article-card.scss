@@ -1,0 +1,49 @@
+.article-card{
+width: 100%;
+text-align: left;
+box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.356);
+background-color: $simi-dark-color;
+transition: all .3s;
+@include response(phone){
+}
+    & > div  {
+        padding: 2rem;
+    }
+    &>p,& >h1 ,&>ul{
+        padding: 0 1rem;
+    }
+    &__icon{
+        font-size: 2rem;
+        @include clearFix;
+        &--folder{
+            float:left;
+        }
+        &--link{
+            float:right;
+        }
+    }
+
+    &__tags{
+        @include clearFix;
+        width: 100%;
+    
+    }
+    & p {
+        min-height: 100px;
+    }
+    &__tag{
+        list-style: none;
+        display: inline-block;
+        width: calc( 100% / 8 ) ;
+        box-sizing: content-box;
+        &:not(:first-child){
+            padding: 1rem;
+        }
+        margin-bottom: 1.5rem;
+    }
+    &:hover{
+       
+        transform: translateY(-5px);
+    }
+
+}

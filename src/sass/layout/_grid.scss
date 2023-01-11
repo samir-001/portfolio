@@ -1,0 +1,218 @@
+
+
+.section{
+    width:$site-width;
+    margin: 0 auto 10rem  auto;
+    position: relative;
+    height:350px;
+    @include clearFix;
+    margin-top:60px;
+                       
+
+    &.about{
+        overflow: hidden;
+    }
+    &.articls{
+        height: auto !important;
+    }
+    @include response(phone){
+        width: 100%;
+        box-sizing: border-box;
+        padding:0rem 2rem;
+        min-height: 21.9rem;
+        font-size: 14px;
+    }
+
+
+    @include response(tab){
+        width: 100%;
+        box-sizing: border-box;
+        padding:0rem 2rem;
+
+    }
+
+    &.header{
+        margin: 10rem auto;
+        @include response(phone){   
+            padding-top: 10%;
+        }
+    }
+
+    &__lonely{
+        max-width: 70%;
+        text-align: center;
+        @include centerElement;
+        
+        @include response(tab){
+            width: 90%;
+            padding: 0rem 2rem;
+
+
+        } 
+        &.header{
+            text-align: left;
+            max-height: 300px;
+        }
+            &.experiance{
+        margin-bottom: 10rem;
+        width: 60%;
+
+        @include response(phone){
+            width: 100%;
+            padding: 0rem 1rem;
+            margin-bottom: 2rem;
+
+        }        
+    }   
+        @include response(phone){
+            max-width: 100%;
+            position: relative;
+            font-size: 1.6rem;
+
+        }
+    }
+    &__container{
+        @include response(tab){
+            position: absolute;
+            top:110%;
+        }
+    }
+
+    &__content--center{
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        
+    }
+    &__side{
+        width:50%;
+        position: relative;
+        
+        
+        &--topR{
+            width:60%;
+            position: absolute;
+            top:50%;
+            right: 0;
+            z-index: 100;
+            transform: translateY(-50%);
+            text-align: right;
+            @include response(phone){
+                width:100%;
+                float:left;
+                text-align: left;
+ 
+            }
+            @include response(tab){
+                padding-right: 1rem;
+ 
+            }
+
+        }
+        &--topL{
+            width: 60%;
+            position: absolute;
+            top:50%;
+            left: 0;
+            transform: translateY(-50%);
+            z-index: 100;
+            text-align: left;
+            @include response(phone){
+                width:100%;
+                text-align: left;
+            }
+            @include response(tab){
+                padding-left: 1rem;
+ 
+            }
+
+        }
+        &--bottomR{
+            float: right;
+            width:50%;
+            height: 100%;
+            right:0;
+            z-index: 95;
+            @include response(phone){
+                display: none;
+               }
+        
+        }
+        &--bottomL{
+        width: 50%;
+        float: left;
+        height: 100%;
+
+        z-index: 95;
+        @include response(phone){
+         display: none;
+        }
+
+        }
+      
+        }
+
+        &__large{
+            
+            position: relative;
+            box-sizing: border-box;
+            width: 60%;
+            height: 100%;
+            float: left;
+
+            @include response(phone){
+                width: 100%;
+                float: none;
+            }
+             }
+             &__small{
+                box-sizing: border-box;
+                width:40% ;
+                height: 100%;
+                position: relative;
+                float: right;
+
+    
+                @include response(phone){
+                    width: 100%;
+                    float: none;
+                 }
+              
+            }
+            .col-1-of-3{
+                width: calc(( 100% - 6rem ) / 3 );
+                display: inline-block;
+                box-sizing: border-box;
+                text-align: center;
+
+
+                &:not(:first-of-type){
+                    margin-left:3rem;
+                    @include response(tab){
+                        margin-left: 2rem;
+                    }
+                    @include response(phone){
+                        margin-left:0rem;
+                    }
+                }
+                &:not(:nth-child(odd)){
+                    @include response(tab){
+                        margin-left: 0rem;
+                    }
+                }
+
+                @include response(tab){
+                    width:calc(( 100% - 2rem ) / 2 );
+                    margin-bottom: 1rem;
+                }
+                @include response(phone){
+                    width: 100%;
+                    margin-bottom: 1rem;
+                }
+
+                }
+    }
+
+
+    

@@ -1,0 +1,22 @@
+.btn{
+    display:inline-block;
+    margin-top:2rem;
+    color: $light-color;
+    font-family: "sans-serif";
+    line-height: 1;
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+    background-color: rgba(0, 0, 0, 0.264);
+    text-decoration: none;
+    border: 1px solid $light-color;
+    border-radius: .6rem;
+    transition: all .3s;
+    &:hover{
+        background-color: $simi-dark-color;
+    }
+    &.ar{
+        
+        float: right;
+        
+    }
+}

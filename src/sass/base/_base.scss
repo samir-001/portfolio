@@ -1,0 +1,50 @@
+*{
+    padding:0;
+    margin:0;
+
+
+
+}
+html{
+    font-size: 62.8%;
+    
+    scroll-behavior: smooth;
+    scroll-padding-top:3rem;
+}
+body{
+    font-family: "Inter";
+    background-color:$dark-color;
+    color:$light-color;
+    letter-spacing: 1px;
+    color: $dark-header-color;
+    font-size: 1.6rem;
+
+
+}
+.ar{
+    text-align: right !important;
+    font-family: "arabic";
+    direction: rtl;
+    font-size: 1.6rem;
+    @include response(phone){
+        text-align: right !important;
+       }
+}
+.ar-font{
+    font-family: "arabic" !important;
+   @include response(phone){
+    text-align: right !important;
+    font-size: 1.3rem;
+   }
+   &.footer{
+    text-align: center !important;
+    @include response(phone){
+        text-align: center !important;
+        font-size: 1.3rem;
+       }
+
+   }
+}
+a{
+    color:$light-header-color;
+}

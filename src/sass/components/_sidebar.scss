@@ -1,0 +1,124 @@
+.sidebar{
+    height: 300px;
+    position: relative;
+    width: auto;
+    @include response(tab){
+      width:80%;
+      margin:auto;
+    }
+    @include response(phone){
+      width:100%;
+      margin:auto;
+    }
+    
+    &__container{
+        width: 60%;
+        @include clearFix;
+        margin:  auto;
+        @include response(tab){
+          width:80%;
+          margin:auto;
+        }
+        @include response(phone){
+          width:100%;
+          margin:auto;
+        }
+ 
+        
+    }
+    &__indecator{
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 1px;
+        height: 100%;
+        background-color: rgb(169, 186, 201);
+                &.ar{
+         left:100%
+        }
+        &--d{
+            content: "";
+            width: 3px;
+            height: calc( 100% / 4);
+            background-color: $light-color;
+            position: absolute;
+            top: 0%;
+            left: -1px;
+            border-radius: 1px;
+            transition: all  .3s;
+            @include response(random-1780){
+                display: none;
+              }
+        }
+        @include response(phone){
+          display: none;
+        }
+        @include response(tab){
+          display: none;
+        }
+
+    }
+    &__nav{
+        position: relative;
+        width:20%;
+        float: left;
+        &.ar{
+          float: right;
+        }
+        @include response(tab){
+            display: flex;
+            width: 100%;
+            overflow: scroll; 
+            margin-bottom: 0;           
+          }
+        @include response(phone){
+            display: flex;
+            width: 100%;
+            overflow: scroll; 
+            margin-bottom: 0;           
+          }
+    
+    }
+    &__link{
+        list-style: none;
+        text-decoration: none;
+        padding:1rem 2rem ;
+        &.ar{
+          padding: .3rem 2rem;
+        }
+  
+        &:hover,&.active{
+            background-color: $simi-dark-color;
+            
+        }
+
+    }
+    &__content{
+        width:70%;
+        letter-spacing: 1px;
+        float: left;
+        padding: 0 2rem;
+        &.ar{
+          float: right;
+        }
+        @include response(phone){
+            width:100%;
+            box-sizing: border-box;
+            letter-spacing: 1px;
+            float: none;
+            padding: 0 0rem;
+
+
+          }
+          @include response(tab){
+            margin-top: 1rem;
+            width:100%;
+            box-sizing: border-box;
+            letter-spacing: 1px;
+  
+            padding: 0 0rem;
+
+          }
+    }
+    
+}

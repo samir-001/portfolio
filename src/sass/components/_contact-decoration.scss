@@ -1,0 +1,59 @@
+.road{
+position: fixed;
+bottom:0;
+height: 35%;
+letter-spacing: 1px;
+@include response(phone){
+    display: none;
+}
+
+&.email{
+    height: 50%;
+}
+&__container{
+    position: relative;
+}
+&__content{
+
+position: relative;
+writing-mode: vertical-lr;
+padding:0 0 1rem 0rem;
+
+z-index: 4000;
+    a{
+    
+    display: inline-block;
+    transition: all .4s;  
+    text-decoration: none;
+    color:$light-color;
+    font-size: 1.1rem;
+    padding:0 0 1rem 0;
+    &.icon{
+        font-size: 1.5rem;
+    }
+    }
+    
+    a:hover{
+    transform: scale(1.2);
+}
+&::after{
+content: "";    
+position: absolute;
+width: 1px;
+height: 150rem;
+bottom: -150rem;
+left: 50%;
+background-color: aliceblue;
+}
+}
+
+&--R{
+    right:1%;
+    
+
+}
+&--L{
+    left:1%;
+}
+
+}

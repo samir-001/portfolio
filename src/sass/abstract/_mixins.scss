@@ -1,0 +1,42 @@
+@mixin  response($breakpoint) {
+    @if $breakpoint == mini-phone {
+        @media(min-width:500px)and (max-width:748px){@content};
+    }
+    @if $breakpoint == phone {
+        @media(max-width:749px){@content};
+    }
+    @if $breakpoint == tab {
+        @media(min-width:750px) and (max-width:1750px)
+        {@content};
+    }
+
+
+    
+}
+@mixin clearFix {
+    &::after{
+        content:"";
+        clear: both;
+        display: table;
+    }
+}
+@mixin centerElement {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    @include response(phone){
+        position: relative;
+        top:0;
+        left: 0;
+        transform: translate(0);
+    }
+    
+}
+@mixin overLaping {
+            @content;
+            width:60%;
+            position: absolute;
+            opacity: .9;
+}
+
